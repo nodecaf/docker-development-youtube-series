@@ -17,7 +17,7 @@ RUN go get github.com/valyala/fasthttp@v1.0.0
 
 # && go mod tidy && go get github.com/buaazp/fasthttprouter
 
-RUN go get github.com/go-delve/delve/cmd/dlv
+RUN go get github.com/go-delve/delve/cmd/dlv@v1.1.0
 
 WORKDIR /go/src/work
 COPY ./src /go/src/work/
