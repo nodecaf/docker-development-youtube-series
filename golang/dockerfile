@@ -1,4 +1,4 @@
-FROM golang:1.18.10-alpine3.17 as debug
+FROM golang:1.14.15-alpine3.13 as debug
 
 # installing git
 RUN apk update && apk upgrade && \
