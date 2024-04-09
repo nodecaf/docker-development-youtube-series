@@ -14,7 +14,7 @@ ENV GO111MODULE on
 
 RUN go get github.com/sirupsen/logrus@v1.3.0
 RUN go get github.com/buaazp/fasthttprouter
-RUN go get github.com/valyala/fasthttp
+RUN go get github.com/valyala/fasthttp@v1.0.0
 RUN go get github.com/go-delve/delve/cmd/dlv
 
 WORKDIR /go/src/work
