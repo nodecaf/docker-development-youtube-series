@@ -10,10 +10,10 @@ RUN apk update && apk upgrade && \
 
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
-ENV GO111MODULE on
+ENV GO111MODULE auto
 RUN rm -rf /go/pkg/mod
 RUN go get github.com/sirupsen/logrus@v1.3.0
-RUN go get github.com/valyala/fasthttp
+RUN go get github.com/valyala/fasthttp@v1.0.0
 
 # && go mod tidy && go get github.com/buaazp/fasthttprouter
 
