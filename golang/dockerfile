@@ -13,7 +13,9 @@ ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 ENV GO111MODULE on
 
 RUN go get github.com/sirupsen/logrus@v1.3.0
-RUN go get github.com/valyala/fasthttp@v1.52.0 && go mod tidy && go get github.com/buaazp/fasthttprouter
+RUN go install github.com/valyala/fasthttp@v1.52.0
+
+# && go mod tidy && go get github.com/buaazp/fasthttprouter
 
 RUN go get github.com/go-delve/delve/cmd/dlv
 
