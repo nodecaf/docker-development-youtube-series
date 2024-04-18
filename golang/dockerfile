@@ -9,11 +9,11 @@ RUN apk update && apk upgrade && \
         musl-dev
 
 ENV GOPATH /go
-ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
-ENV GO111MODULE on
-RUN rm -rf /go/pkg/mod
-RUN go install github.com/sirupsen/logrus@latest
-RUN go get github.com/valyala/fasthttp@v1.0.0
+#ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+#ENV GO111MODULE on
+#RUN rm -rf /go/pkg/mod
+#RUN go install github.com/sirupsen/logrus@latest
+#:RUN go get github.com/valyala/fasthttp@v1.0.0
 
 # && go mod tidy && go get github.com/buaazp/fasthttprouter
 
