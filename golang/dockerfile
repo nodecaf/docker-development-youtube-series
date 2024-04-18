@@ -22,7 +22,7 @@ ENV GOPATH /go
 WORKDIR /go/src/work
 COPY ./src /go/src/work/
 
-RUN go build -o app
+RUN go mod init && go mod tidy && go build -o app
 ### Run the Delve debugger ###
 COPY ./dlv.sh /
 RUN chmod +x /dlv.sh 
